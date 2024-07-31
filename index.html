@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wen's Tank Challenge</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <input type="text" id="playerName" placeholder="Enter your name">
+    <button id="startGame">Start a new game</button>
+    <button id="saveGame">Save the game</button>
+    <button id="loadGame">Load the game</button>
+    <div id="gameInstructions">
+        <p>Use WASD to move your tank</p>
+        <p>Press Enter to shoot</p>
+        <p>Blue orbs gives you 1 life</p>
+        <p>Red orbs make walls stationary for four seconds</p>
+        <p>Reach the blue tile to advance to the next level</p>
+        <p>Touching the black orb kills you</p>
+    </div>
+    <div id="introText">
+        <p>12/07/1987 In the province of Yunnan, a ruthless and evil Wen has gathered his forces. His goal is to capture pandas and transform them into soldiers for his troops. You must stop him! - Sergeant Holmes</p>
+    </div>
+    <div style="display: flex;">
+        <div style="position:relative;">
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+            <div id="cutsceneText">
+                <p>So you're tough, you think?! How about I show the power of four!!!! Aaah hahaha! I, Wen, always win! (Press Enter to continue)</p>
+            </div>
+            <div id="timer">00:00:000</div>
+            <div id="endGameMessage">You defeated Wen and his evil plans!</div>
+        </div>
+    </div>
+    <div id="tablesContainer">
+        <table class="table" id="timeTable">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table class="table" id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
